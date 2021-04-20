@@ -5,11 +5,11 @@ import "./cart-dropdown.styles.scss";
 import CartItem from "../cart-item/cart-item.component";
 import {withRouter} from "react-router-dom";
 import {toggleCartHidden} from "../../redux/cart/cart.actions";
-
+import {selectCurrentUser} from "../../redux/user/user.selector";
 import {selectCartItems} from "../../redux/cart/cart.selectors";
 import CustomButton from "../custom-button/custom-button.component";
 
-const CartDropdown=({cartItems,history,dispatch})=>(
+const CartDropdown=({cartItems,history,dispatch,currentUser})=>(
     <div className="cart-dropdown">
         <div className="cart-items">
             {
@@ -20,15 +20,24 @@ const CartDropdown=({cartItems,history,dispatch})=>(
                 <span className="empty-message">Your cart is empty</span>
             }
         </div>
-        <CustomButton onClick={()=>
-        {history.push("/checkout");
-         dispatch(toggleCartHidden())}
+        {
+                 currentUser?
+                 <CustomButton onClick={
+            ()=>{
+                history.push("/checkout");
+                dispatch(toggleCartHidden())
+                }
         }>GO TO CHECKOUT</CustomButton>
+                 :
+                <h3>Do Sign in for checkout</h3>
+             }
+        
     </div>
 );
 
 const mapStateToProps=createStructuredSelector({
-    cartItems:selectCartItems
+    cartItems:selectCartItems,
+    currentUser:selectCurrentUser
 
 })
 

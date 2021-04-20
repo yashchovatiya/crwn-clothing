@@ -31,9 +31,11 @@ const CartReducer=(state=INITIAL_STATE,action)=>{
                     cartItem=>cartItem.id!=action.payload.id
                     )
             }  
-            
-        
-
+        case CartActionTypes.PAYMENT_DONE:
+            return{
+                ...state,
+                cartItems:[]
+            }  
         default:
             return state;    
     }

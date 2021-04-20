@@ -60,7 +60,6 @@ class App extends Component {
           <Route exact path="/signin"
            render={()=>this.props.currentUser?(<Redirect to="/"></Redirect>):(<SignInAndSignUpPage></SignInAndSignUpPage>)}
           ></Route>
-        
         </Switch>
       </div>
     );
