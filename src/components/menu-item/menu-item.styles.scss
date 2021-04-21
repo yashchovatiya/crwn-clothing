@@ -59,21 +59,34 @@
       background-color: white;
       opacity: 0.7;
       position: absolute ;
+      @media screen and (max-width:800px){
+        max-width: max-content;
+        display: flex;
+        justify-content: center;
+    }
   
       .title {
         font-weight: bold;
         margin-bottom: 6px;
         font-size: 22px;
         color: #4a4a4a;
+        display: flex;
+        justify-content: center;
       }
   
       .subtitle {
+        display: flex;
+        flex-direction: column;
         font-weight: lighter;
         font-size: 16px;
+        @media screen and (max-width:800px){
+          display: flex;
+          justify-content: center;
+      }
       }
 
       @media screen and (max-width:800px){
-        width: 30vw;
+        width: 35vw;
     }
      
     }
