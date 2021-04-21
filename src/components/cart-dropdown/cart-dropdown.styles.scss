@@ -10,6 +10,10 @@
     top: 90px;
     right: 40px;
     z-index: 5;
+    @media screen and (max-width:500px) {
+      // width: 100vw;
+      width: 70vw;
+  }
 
     .empty-message{
       font-size: 18px;
@@ -25,6 +29,12 @@
   
     button {
       margin-top: auto;
+      font-size: medium;
+      color: white;
+      background-color: black;
+      @media screen and(max-width:500px) {
+        
+      }
     }
   }
   

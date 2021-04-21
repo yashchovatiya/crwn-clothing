@@ -16,10 +16,27 @@
         height: 100%;
       }
     }
-    .name,
-    .quantity,
+    .name{
+      width: 23%;
+      @media screen and(max-width:500px) {
+        font-size: small;
+        padding-right: 10px;
+      }
+    }
+    .quantity{
+      width: 23%;
+      @media screen and(max-width:500px) {
+        font-size: medium;
+      }
+      
+    }
     .price {
       width: 23%;
+      @media screen and(max-width:500px) {
+        font-size: medium;
+        padding-left: 7px;
+      }
+      
     }
   
     .quantity {
@@ -36,6 +53,10 @@
     .remove-button {
       padding-left: 12px;
       cursor: pointer;
+      @media screen and (max-width:500px) {
+        // width: 100vw;
+        padding-left:0px;
+        }
     }
   }
   

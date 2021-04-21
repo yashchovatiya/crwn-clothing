@@ -22,14 +22,14 @@ const CartDropdown=({cartItems,history,dispatch,currentUser})=>(
         </div>
         {
                  currentUser?
-                 <CustomButton onClick={
+                 <CustomButton className="button" onClick={
             ()=>{
                 history.push("/checkout");
                 dispatch(toggleCartHidden())
                 }
         }>GO TO CHECKOUT</CustomButton>
                  :
-                <h3>Do Sign in for checkout</h3>
+                <h3>Do Sign In For Checkout</h3>
              }
         
     </div>
