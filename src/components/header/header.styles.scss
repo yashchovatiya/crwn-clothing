@@ -15,6 +15,12 @@
       height: 100%;
       width: 70px;
       padding: 25px;
+     
+      .logo{
+        &:hover{
+          transform: translateY(-10px);
+        }
+      }
 
       @media screen and (max-width:800px){
         width: 50px;
@@ -35,7 +41,12 @@
   
       .option {
         padding: 10px 15px;
+        font-size: 20px;
         cursor: pointer;
+
+        &:hover{
+          transform: translateY(-10px);
+        }
       }
     }
   }
